@@ -17,3 +17,17 @@ Route::get('/', function () {
 Route::get('about', function () {
     return 'Ini bout';
 });
+// Opsi 1 penamaan route
+// Route::get('halaman-rahasia', ['as' => 'secret', function(){
+//     return 'Anda sedang melihat <strong> halaman Rahasia.</strong>';
+// }]);
+
+//Opsi 2 penamaan route
+Route::get('halaman-rahasia',  function(){
+    return 'Anda sedang melihat <strong> halaman Rahasia.</strong>';
+})->name('secret');
+
+
+Route::get('showmesecret', function(){
+    return redirect()->route('secret');
+});
