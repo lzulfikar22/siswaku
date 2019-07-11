@@ -35,7 +35,20 @@ Route::get('showmesecret', function(){
 });
 
 //Bikin route siswa
+
+//Untuk masukin data cara 1
+// Route::get('siswa', function(){
+//     $siswa = ['Ujang Codet','Asep Robot','Jajang Berlian'];
+//     return view('siswa.index', compact('siswa'));
+// });
+
+//Untuk masukin data cara2
+// Route::get('siswa', function(){
+//     $siswa = ['Ujang Codet','Asep Robot','Jajang Berlian'];
+//     return view('siswa.index')->with('siswa', $siswa);
+// });
+//Untuk masukin data cara3
 Route::get('siswa', function(){
     $siswa = ['Ujang Codet','Asep Robot','Jajang Berlian'];
-    return view('siswa.index', compact('siswa'));
+    return view('siswa.index', ['siswa' => $siswa]);
 });
