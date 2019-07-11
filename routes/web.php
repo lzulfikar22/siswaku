@@ -12,10 +12,10 @@
 */
 
 Route::get('/', function () {
-    return 'Halo teman semua.<br>lorem ipsum';
+    return view('homepage');
 });
 Route::get('about', function () {
-    return 'Ini bout';
+    return view('about');
 });
 // Opsi 1 penamaan route
 // Route::get('halaman-rahasia', ['as' => 'secret', function(){
