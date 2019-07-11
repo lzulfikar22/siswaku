@@ -10,12 +10,14 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// Tampilan awal
 Route::get('/', function () {
-    return view('homepage');
+    return view('pages/homepage');
 });
+
+//Tampilan about
 Route::get('about', function () {
-    return view('about');
+    return view('pages.about');
 });
 // Opsi 1 penamaan route
 // Route::get('halaman-rahasia', ['as' => 'secret', function(){
@@ -30,4 +32,10 @@ Route::get('halaman-rahasia',  function(){
 
 Route::get('showmesecret', function(){
     return redirect()->route('secret');
+});
+
+//Bikin route siswa
+Route::get('siswa', function(){
+    $siswa = ['Ujang Codet','Asep Robot','Jajang Berlian'];
+    return view('siswa.index', compact('siswa'));
 });
