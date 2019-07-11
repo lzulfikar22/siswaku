@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'Halo teman semua.<br>lorem ipsum';
+});
+Route::get('about', function () {
+    return 'Ini bout';
 });
