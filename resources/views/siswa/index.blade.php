@@ -1,3 +1,6 @@
+@extends('template')
+
+@section('main')
 <div id='siswa'>
     <h2>Siswa</h2>
 
@@ -11,3 +14,9 @@
         <p>Tidak ada data siswa.</p>
     <?php endif ?>
 </div>
+@stop
+@section('footer')
+<div id='footer'>
+    <p>&copy; 2019 siswaku.app</p>
+</div>
+@stop
